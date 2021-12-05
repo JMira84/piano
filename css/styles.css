@@ -120,7 +120,7 @@ table {
 
 .black-key {
     position: absolute;
-    top: -3px;
+    top: -5px;
     right: -11px;
     width: 55%;
     height: 60%;
@@ -146,7 +146,7 @@ table {
         height: 190px;
     }
     .black-key {
-        top: -8px;
+        top: -10px;
         right: -14px;
         width: 50%;
     }
