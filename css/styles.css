@@ -67,6 +67,8 @@ table {
     align-items: center;
     justify-content: center;
     height: 100%;
+    padding: 0 10px;
+    overflow-x: hidden;
 }
 
 /**********************************************
@@ -84,7 +86,7 @@ table {
     display: flex;
     flex-flow: row nowrap;
     justify-content: center;
-    width: 30px;
+    min-width: 30px;
     height: 130px;
     padding: 5px;
 }
@@ -119,8 +121,8 @@ table {
 .black-key {
     position: absolute;
     top: -3px;
-    right: -10px;
-    width: 50%;
+    right: -11px;
+    width: 55%;
     height: 60%;
     background-color: #000;
     z-index: 10;
@@ -135,6 +137,10 @@ table {
 ***********************************************/
 
 @media screen and (min-width: 850px) {
+    .container {
+        padding: 0 30px;
+    }
+
     .keys-wrapper {
         width: 50px;
         height: 190px;
@@ -142,5 +148,6 @@ table {
     .black-key {
         top: -8px;
         right: -14px;
+        width: 50%;
     }
 }
