@@ -9,6 +9,8 @@ function renderWhiteKeys () {
         createdKeyWrappers.classList.add('keys-wrapper');
         whiteKey.classList.add('white-key', 'white-key' + [i]);
         whiteKey.setAttribute('id', 'key-' + [i + 1]);
+
+        whiteKey.addEventListener('click', e => playSounds(e));
     }
 }
 
@@ -30,22 +32,21 @@ function renderBlackKeys () {
         } else {
             blackKey.setAttribute('id', 'key-' + [i + 14 - 3]);
         }
+
+        blackKey.addEventListener('click', e => playSounds(e));
     }
 }
 
-function playSounds () {
-    document.addEventListener('click', e => {
-        const audio = new Audio();
-        const src = `./assets/sounds/${e.target.id}.mp3`;
-        audio.src = src;
-        audio.currentTime = 0;
-        audio.play();
-        return audio;
-    });
+function playSounds (e) {
+    const audio = new Audio();
+    const src = `./assets/sounds/${e.target.id}.mp3`;
+    audio.src = src;
+    audio.currentTime = 0;
+    audio.play();
+    return audio;
 }
 
 window.onload = function() {
     renderWhiteKeys();
     renderBlackKeys();
-    playSounds();
 }
